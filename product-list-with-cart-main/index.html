@@ -16,12 +16,79 @@
       box-sizing: border-box;
     }
 
-    .container{
-      width: 70%;
-      padding: 20px;
-      display: grid;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Adjust the 300px to your preferred cart width */
+  gap: 20px;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    }
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.img {
+  position: relative;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.img button:hover {
+  background-color: #555;
+}
+
+.details {
+  padding: 15px;
+}
+
+.details p {
+  color: #666;
+  margin: 0 0 5px;
+}
+
+.details h3 {
+  margin: 0 0 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+.cart {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
 
 
     .attribution { font-size: 11px; text-align: center; }
@@ -32,82 +99,85 @@
 
 <h1>Desserts</h1>
 <div class="container">
-
-  <div class="item">
-    <div class="img">
-      <img src="assets/images/image-waffle-desktop.jpg" alt="item">
-      <button>Add to Cart</button>
+  <div class="items-grid">
+    <div class="item">
+      <div class="img">
+        <img src="assets/images/image-waffle-desktop.jpg" alt="item">
+        <button>Add to Cart</button>
+      </div>
+      <div class="details">
+        <p>Waffle</p>
+        <h3>Waffle with Berries</h3>
+        <div class="price">6.50</div>
+      </div>
     </div>
-    <div class="details">
-      <p>Waffle</p>
-      <h3>Waffle with Berries</h3>
-      <div class="price">6.50</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="img">
-      <img src="assets/images/image-waffle-desktop.jpg" alt="item">
-      <button>Add to Cart</button>
-    </div>
-    <div class="details">
-      <p>Waffle</p>
-      <h3>Waffle with Berries</h3>
-      <div class="price">6.50</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="img">
-      <img src="assets/images/image-waffle-desktop.jpg" alt="item">
-      <button>Add to Cart</button>
-    </div>
-    <div class="details">
-      <p>Waffle</p>
-      <h3>Waffle with Berries</h3>
-      <div class="price">6.50</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="img">
-      <img src="assets/images/image-waffle-desktop.jpg" alt="item">
-      <button>Add to Cart</button>
-    </div>
-    <div class="details">
-      <p>Waffle</p>
-      <h3>Waffle with Berries</h3>
-      <div class="price">6.50</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="img">
-      <img src="assets/images/image-waffle-desktop.jpg" alt="item">
-      <button>Add to Cart</button>
-    </div>
-    <div class="details">
-      <p>Waffle</p>
-      <h3>Waffle with Berries</h3>
-      <div class="price">6.50</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="img">
-      <img src="assets/images/image-waffle-desktop.jpg" alt="item">
-      <button>Add to Cart</button>
-    </div>
-    <div class="details">
-      <p>Waffle</p>
-      <h3>Waffle with Berries</h3>
-      <div class="price">6.50</div>
-    </div>
-  </div>
-
   
+    <div class="item">
+      <div class="img">
+        <img src="assets/images/image-waffle-desktop.jpg" alt="item">
+        <button>Add to Cart</button>
+      </div>
+      <div class="details">
+        <p>Waffle</p>
+        <h3>Waffle with Berries</h3>
+        <div class="price">6.50</div>
+      </div>
+    </div>
   
+    <div class="item">
+      <div class="img">
+        <img src="assets/images/image-waffle-desktop.jpg" alt="item">
+        <button>Add to Cart</button>
+      </div>
+      <div class="details">
+        <p>Waffle</p>
+        <h3>Waffle with Berries</h3>
+        <div class="price">6.50</div>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="img">
+        <img src="assets/images/image-waffle-desktop.jpg" alt="item">
+        <button>Add to Cart</button>
+      </div>
+      <div class="details">
+        <p>Waffle</p>
+        <h3>Waffle with Berries</h3>
+        <div class="price">6.50</div>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="img">
+        <img src="assets/images/image-waffle-desktop.jpg" alt="item">
+        <button>Add to Cart</button>
+      </div>
+      <div class="details">
+        <p>Waffle</p>
+        <h3>Waffle with Berries</h3>
+        <div class="price">6.50</div>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="img">
+        <img src="assets/images/image-waffle-desktop.jpg" alt="item">
+        <button>Add to Cart</button>
+      </div>
+      <div class="details">
+        <p>Waffle</p>
+        <h3>Waffle with Berries</h3>
+        <div class="price">6.50</div>
+      </div>
+    </div>
+  </div>
+  <div class="cart">
+    <h2>Cart</h2>
+    <!-- Cart content goes here -->
+  </div>
 </div>
+
 
 
   Vanilla Bean Crème Brûlée
